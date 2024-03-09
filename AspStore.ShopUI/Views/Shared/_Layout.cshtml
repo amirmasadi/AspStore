@@ -3,11 +3,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="row">
+        <div class="col-3"> Sidebar Here</div>
+        <div class="col-9">@RenderBody()</div>
     </div>
 </body>
 </html>

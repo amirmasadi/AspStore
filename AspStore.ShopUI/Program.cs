@@ -16,5 +16,10 @@ app.UseStatusCodePages();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute("pagination", "/{controller=home}/{action=index}/Page{pageNumber}");
+    endpoints.MapDefaultControllerRoute();
+
+});
 app.Run();
